@@ -1,0 +1,55 @@
+ EXTRA | # Buenos días/tardes/noches a todos, el día de hoy estuve pensando en crear un nuevo entorno, ya que he vuelto a windows y de paso he decidido volver a ParrotOS, así haciendo 
+   1   │ un nuevo entorno.
+   2   │ 
+   3   │ # Bien pues solo recordar que un 95% está agarrado de otro github. Daré créditos en el "readme".
+   4   │ 
+   5   │ # Empecemos primero que nada clonando el repositorio de "xjacksx" para parrot.
+   6   │ git clone https://github.com/xJackSx/BSPWMparrot
+   7   │ 
+   8   │ # Una vez clonado y entrado con BSPWM, nos saldrá un entorno bastante bonito, pero yo he decidido retocarlo un poco.
+   9   │ # Entraremos en picom
+  10   │ cd .config/picom
+  11   │ nano picom.conf
+  12   │ 
+  13   │ # Una vez dentro del picom.conf, tenemos que buscar los "corners", es lo primero que sale.
+  14   │ 
+  15   │ # Bien, editamos el "corner-radius" y ponemos 20, esto es para más adelante no nos dé error.
+  16   │ corner-radius = 20;
+  17   │ 
+  18   │ # Luego bajamos y ponemos las sombras en "false" para que nos vaya un poquito mejor si tiramos de máquina virtual.
+  19   │ shadow = false
+  20   │ 
+  21   │ # Ahora entramos a la Polybar.
+  22   │ cd .config/polybar
+  23   │ nano current.ini
+  24   │ 
+  25   │ # Filtramos por "Corners", y donde pone "radius-top" y "radius-bottom" pondremos esto
+  26   │ radius-top = 20.0
+  27   │ radius-bottom = 20.0
+  28   │ 
+  29   │ # Una vez hecho eso, guardamos y nos salimos para luego meternos a "workspace.ini", ahí buscamos "corners" de nuevo y ponemos lo mismo que lo de arriba.
+  30   │ radius-top = 20.0
+  31   │ radius-bottom = 20.0
+  32   │ 
+  33   │ # La diferencia de "workspace.ini" y "current.ini" es que básicamente "current.ini" es lo de los laterales y "workspace.ini" es la barra del centro
+  34   │ 
+  35   │ # Retocamos el fondo de pantalla
+  36   │ # Si no te gusta el que viene por defecto, puedes agarrar uno de mi otro repositorio 
+  37   │ https://github.com/Aussterben/Wallpapers
+  38   │ 
+  39   │ # Para poner el fondo de pantalla, tenemos que descargarnos el que queramos. Una vez que sepamos donde está, vamos a ese directorio y ponemos lo siguiente
+  40   │ feh --bg-fill wallpaper.png
+  41   │ 
+  42   │ # Una vez que hayamos escogido el wallpaper que queramos, simplemente vamos a la ruta donde lo hemos guardado. Imagínate que lo has guardado en "~/Desktop/wallpaper.png".
+  43   │ # Pues lo que tienes que hacer es irte directamente a ".config/bspwm" y editar el bspwmrc. Ahí verás una pestaña que pone "wallpaper". Ahí pondrás el directorio de donde está 
+   -   │ el wallpaper.
+  44   │ 
+  45   │ # Si no lo has entendido, tengo un vídeo explicándolo
+  46   │ 
+  47   │ # Vídeo donde explico como cambiar el fondo de pantalla: https://www.youtube.com/watch?v=Y4mxrOM0A_c&t=33s
+  48   │ # Vídeo donde explico como automatizar comandos al iniciar bspwm (Incluido el wallpaper): https://www.youtube.com/watch?v=dzc92vmu5iU&t=125s
+  49   │ 
+  50   │ # Y listo, una vez hecho todo eso, simplemente recargamos con "win + alt + r" y listo, ya tendríamos nuestro entorno nuevo.
+  51   │ # Créditos a xJackSx por hacer el 95% de todo bspwm
+  52   │  
+  53   │ # Vídeo próximamente explicando como se hace esto
